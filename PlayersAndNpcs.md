@@ -1,14 +1,14 @@
 # Old School RuneScape Steam version - Players and NPCs | Reversing Games
   
-With the release of the [Steam version of Old School RuneScape](https://web.archive.org/web/20210613145519/https://store.steampowered.com/app/1343370/Old_School_RuneScape/), the game client was ported from its old Java version to a native C++ version so I figured whatâ€™s a better time to start looking in to reverse engineering the game.
+With the release of the [Steam version of Old School RuneScape](https://store.steampowered.com/app/1343370/Old_School_RuneScape/), the game client was ported from its old Java version to a native C++ version so I figured whatâ€™s a better time to start looking in to reverse engineering the game.
 
-The use of third party clients such as [RuneLite](https://web.archive.org/web/20210613145519/https://runelite.net/) is very popular in Old School RuneScape, some even say itâ€™s necessary to use them to enjoy the game though I disagree with this personally. Third party clients are designed to bring a lot of Quality of Life improvements to the game by making UI additions that often present the game data better for example displaying the names of items on the ground to highlight good drops or overlaying the names of friends and clan chat members. These are simple examples but should give you an idea of what the clients look to do. Hereâ€™s where I try to come in, since obviously none of the Java based third party clients would work for the new C++ version on Steam I figured maybe there would be some demand for some kind of an alternative for the Steam version.
+The use of third party clients such as [RuneLite](https://runelite.net/) is very popular in Old School RuneScape, some even say itâ€™s necessary to use them to enjoy the game though I disagree with this personally. Third party clients are designed to bring a lot of Quality of Life improvements to the game by making UI additions that often present the game data better for example displaying the names of items on the ground to highlight good drops or overlaying the names of friends and clan chat members. These are simple examples but should give you an idea of what the clients look to do. Hereâ€™s where I try to come in, since obviously none of the Java based third party clients would work for the new C++ version on Steam I figured maybe there would be some demand for some kind of an alternative for the Steam version.
 
 Due to the nature of my goals I will not be reverse engineering or posting any analysis of the bot detection systems or mouse heuristics recording if they are there. I would also like to point out that I have no previous experience with the game and its client code, so some of the things I do may be done weird or might seem obvious to a more veteran RuneScape hackers.
 
 In this first part of my blog series on reverse engineering this game, I will be going through finding the local player, the player list and the NPC list. I will be going through the process thoroughly step-by-step as I want to keep this post very accessible to even those who have no reverse engineering or game hacking background and I will mostly show the decompiler output rather than trying to explain the assembly.
 
-Tools used: [ReClass.NET](https://web.archive.org/web/20210613145519/https://github.com/ReClassNET/ReClass.NET) and [Ghidra](https://web.archive.org/web/20210613145519/https://ghidra-sre.org/)
+Tools used: [ReClass.NET](https://github.com/ReClassNET/ReClass.NET) and [Ghidra](https://ghidra-sre.org/)
 
 Contents of this blog are based on the 26.2.2021 build of osclient.exe
 
@@ -133,6 +133,6 @@ I hope I didnâ€™t make it too unbearably step-by-step, but I want to help p
 
 Iâ€™d really like to know if you think I shouldnâ€™t be this detailed in future posts or if you want me to keep it going the same way.
 
-Feedback, complaints, whatever are easiest sent to [@alert\_insecure](https://web.archive.org/web/20210613145519/https://twitter.com/alert_insecure) on twitter or alternatively email siteatte@reversing.games
+Feedback, complaints, whatever are easiest sent to [@alert\_insecure](https://twitter.com/alert_insecure) on twitter or alternatively email siteatte@reversing.games
 
 Reposting the content of this blogpost is allowed as long as you link back to this blogpost as the original source and remember to credit me. Disclaimer: Linking this on something like UC is not possible so do not post this there.
